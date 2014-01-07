@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.techblue.cordova.plugin.externalfileutilios"
+    version="0.0.1">
+
+    <name>External File Utility</name>
+
+    <description>External file utility to open the document in external programs in ios.</description>
+    <author>Neeraj Sharma, Technology Blueprint</author>
+
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=2.9.0" />
+    </engines>
+
+    <js-module src="www/externalfileutilios.js" name="ExternalFileUtilIos">
+          <clobbers target="ExternalFileUtil"/>
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ExternalFileUtilIos">
+                <param name="ios-package" value="ExternalFileUtilIos"/>
+            </feature>
+		</config-file>
+		<header-file src="src/ios/CDVExternalFileUtilIos.h" />
+	    <source-file src="src/ios/CDVExternalFileUtilIos.m" />
+    </platform>
+
+</plugin>
