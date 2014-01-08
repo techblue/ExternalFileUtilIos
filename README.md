@@ -16,15 +16,9 @@ ExternalFileUtil.openWith( "http://www.tricedesigns.com/temp/log_samsung.pdf", "
 The PhoneGap native plugin is written in Objective C, with a JavaScript interface to integrate with the client application.
 
 The plugin workflow is as follows:
-
 1) App requests openWith action, specifying a file URL and UTI.
-
 2) Plugin downloads the file and saves as a local temp file
-
 3) Plugin uses UIDocumentInteractionController to launch an "open with" dialog
-
 4) User selects appropriate app to "preview" the content
-
 5) The appropriate reader app is opened and UI/input is changed to that app
-
 6) Plugin deletes the temp file
