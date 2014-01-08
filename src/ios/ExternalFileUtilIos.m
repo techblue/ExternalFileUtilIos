@@ -3,11 +3,13 @@
 
 @implementation ExternalFileUtilIos
 
-
-- (void) openWith:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options
-{   
+- (void) openWith:(CDVInvokedUrlCommand*)command
+{
     CDVPluginResult* pluginResult;
-    NSString* callbackID = [arguments pop];
+    NSString* callbackID = command.callbackId;
+    NSArray *arguments = command.arguments;
+   
+    //[arguments pop];
     [callbackID retain];
     
     NSString *path = [arguments objectAtIndex:0]; 
