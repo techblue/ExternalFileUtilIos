@@ -5,7 +5,7 @@
     NSString *localFile;
 }
 
-- (void) openWith:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
+- (void) openWith:(CDVInvokedUrlCommand*)command;
 - (void) cleanupTempFile: (UIDocumentInteractionController *) controller;
 
 @end
