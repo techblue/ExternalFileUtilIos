@@ -7,7 +7,7 @@ var exec = cordova.require('cordova/exec'),
     };
 
 function openWith( path, uti, success, fail) {
-    return cordova.exec(success, fail, "ExternalFileUtil", "openWith", [path, uti]);
+    return cordova.exec(success, fail, "ExternalFileUtilIos", "openWith", [path, uti]);
 };
 
 module.exports = {
