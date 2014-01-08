@@ -16,7 +16,7 @@
     </engines>
 
     <js-module src="www/externalfileutilios.js" name="ExternalFileUtilIos">
-          <clobbers target="ExternalFileUtil"/>
+          <clobbers target="ExternalFileUtilIos"/>
     </js-module>
 
     <platform name="ios">
@@ -25,8 +25,8 @@
                 <param name="ios-package" value="ExternalFileUtilIos"/>
             </feature>
 		</config-file>
-		<header-file src="src/ios/CDVExternalFileUtilIos.h" />
-	    <source-file src="src/ios/CDVExternalFileUtilIos.m" />
+		<header-file src="src/ios/ExternalFileUtilIos.h" />
+	    <source-file src="src/ios/ExternalFileUtilIos.m" />
     </platform>
 
 </plugin>
