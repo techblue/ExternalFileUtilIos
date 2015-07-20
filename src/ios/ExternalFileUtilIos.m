@@ -10,13 +10,13 @@
     NSArray *arguments = command.arguments;
    
     //[arguments pop];
-    [callbackID retain];
+//    [callbackID retain];
     
     NSString *path = [arguments objectAtIndex:0]; 
-    [path retain];
+//    [path retain];
     
     NSString *uti = [arguments objectAtIndex:1]; 
-    [uti retain]; 
+//    [uti retain]; 
     
     NSLog(@"path %@, uti:%@", path, uti);
     
@@ -31,7 +31,7 @@
     NSString *documentsDirectory = [paths objectAtIndex:0];
     if (!documentsDirectory) {NSLog(@"Documents directory not found!");}
     localFile = [documentsDirectory stringByAppendingPathComponent:previewDocumentFileName];
-    [localFile retain];
+//    [localFile retain];
     [fileRemote writeToFile:localFile atomically:YES];
     NSLog(@"Resource file '%@' has been written to the Documents directory from online", previewDocumentFileName);
     
@@ -40,7 +40,7 @@
     NSURL *fileURL = [NSURL fileURLWithPath:localFile];
     
     UIDocumentInteractionController *controller = [UIDocumentInteractionController  interactionControllerWithURL:fileURL];
-    [controller retain];
+//    [controller retain];
     controller.delegate = self;
     controller.UTI = uti;
     
@@ -55,9 +55,9 @@
     }
     [self writeJavascript: [pluginResult toSuccessCallbackString:callbackID]];
     
-    [callbackID release];
-    [path release];
-    [uti release];
+//    [callbackID release];
+//    [path release];
+//    [uti release];
 }
 
 - (void) documentInteractionControllerDidDismissOpenInMenu:(UIDocumentInteractionController *)controller {
@@ -88,8 +88,8 @@
         BOOL success = [fileManager removeItemAtPath:localFile error:&error];
         if (!success) NSLog(@"Error: %@", [error localizedDescription]);
     }
-    [localFile release];
-    [controller release];
+//    [localFile release];
+//    [controller release];
 }
 
 @end
